@@ -1,0 +1,79 @@
+.footer {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-glass {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 30px;
+  text-align: center;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0.05)
+  );
+
+  backdrop-filter: blur(40px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  box-shadow:
+    0 0 60px rgba(157, 78, 221, 0.6),
+    inset 0 0 30px rgba(255, 255, 255, 0.25);
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+
+.socials a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 245, 255, 0.15);
+  border: 1px solid rgba(0, 245, 255, 0.4);
+
+  box-shadow: 0 0 25px rgba(0, 245, 255, 0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.socials a:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 0 45px rgba(0, 245, 255, 1);
+}
+
+.socials svg {
+  width: 22px;
+  height: 22px;
+  fill: #00f5ff;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .footer-glass {
+    padding: 24px;
+  }
+
+  .socials {
+    gap: 20px;
+  }
+
+  .socials a {
+    width: 40px;
+    height: 40px;
+  }
+}

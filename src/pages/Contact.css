@@ -1,0 +1,151 @@
+.contact {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* MAIN LIQUID GLASS CARD */
+.contact-card {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  padding: 60px;
+  border-radius: 38px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.26),
+    rgba(255, 255, 255, 0.06)
+  );
+
+  backdrop-filter: blur(45px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  box-shadow:
+    0 0 90px rgba(157, 78, 221, 0.65),
+    inset 0 0 40px rgba(255, 255, 255, 0.35);
+}
+
+/* LIQUID SHINE OVERLAY */
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 38px;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.35),
+    transparent 60%
+  );
+
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* TITLE */
+.contact-card h1 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 40px;
+
+  background: linear-gradient(90deg, var(--pink), var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: pink;
+}
+
+/* CONTACT ROW */
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+/* LABEL */
+.label {
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
+
+/* VALUE */
+.value {
+  font-weight: 500;
+}
+
+/* LINKS */
+/* LINKS – HIGH CONTRAST */
+.link {
+  color: #00f5ff; /* neon cyan for visibility */
+  text-decoration: none;
+  font-weight: 600;
+
+  padding: 6px 14px;
+  border-radius: 14px;
+
+  background: rgba(0, 245, 255, 0.12); /* glass pill */
+  border: 1px solid rgba(0, 245, 255, 0.35);
+
+  box-shadow: 0 0 18px rgba(0, 245, 255, 0.5);
+
+  transition: 
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.link:hover {
+  background: rgba(0, 245, 255, 0.22);
+  box-shadow: 0 0 35px rgba(0, 245, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+
+.link:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 768px) {
+  .glass-card,
+  .skills-card,
+  .about-card,
+  .contact-card {
+    padding: 32px;
+    border-radius: 28px;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .link {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
