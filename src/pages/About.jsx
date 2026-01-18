@@ -1,7 +1,19 @@
+import { useState } from "react";
 import "./About.css";
 import profileImg from "../assets/profile.jpeg";
 
 function About() {
+  const [downloading, setDownloading] = useState(false);
+
+  const handleDownload = () => {
+    setDownloading(true);
+
+    // Reset text after short delay
+    setTimeout(() => {
+      setDownloading(false);
+    }, 2000);
+  };
+
   return (
     <section className="about">
       <div className="glass-card about-card">
@@ -46,7 +58,9 @@ function About() {
             </li>
 
             <li>
-              <strong>FAER – Real-Time Disaster Information Aggregation Software</strong>
+              <strong>
+                FAER – Real-Time Disaster Information Aggregation Software
+              </strong>
               <p>
                 Certified for deploying disaster data aggregation using
                 EC2, S3, Lambda, and CloudWatch. Presented at an
@@ -56,17 +70,20 @@ function About() {
             </li>
           </ul>
         </div>
+
+        {/* RESUME DOWNLOAD */}
         <div className="resume-wrapper">
-            <a
+          <a
             href="/Jogan_Sridhar_Resume.pdf"
             download
             className="resume-btn"
-            >
-            Download Resume
-            </a>
+            onClick={handleDownload}
+          >
+            {downloading ? "Downloading..." : "Download Resume"}
+          </a>
         </div>
 
-
+        {/* QUOTE */}
         <p className="quote">
           “Still learning. Still growing.”
         </p>

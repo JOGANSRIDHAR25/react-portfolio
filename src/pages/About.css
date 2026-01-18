@@ -118,6 +118,14 @@
   justify-content: center;
   margin-top: 40px;
 }
+.resume-btn {
+  position: relative;
+}
+
+.resume-btn:active {
+  transform: scale(0.96);
+}
+
 
 
 @media (max-width: 768px) {
