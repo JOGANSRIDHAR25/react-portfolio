@@ -56,6 +56,16 @@ function About() {
             </li>
           </ul>
         </div>
+        <div className="resume-wrapper">
+            <a
+            href="/Jogan_Sridhar_Resume.pdf"
+            download
+            className="resume-btn"
+            >
+            Download Resume
+            </a>
+        </div>
+
 
         <p className="quote">
           “Still learning. Still growing.”
